@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Prompt:400,600&display=swap');
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Prompt'), local('Prompt-Regular'), url(https://fonts.gstatic.com/s/prompt/v4/-W__XJnvUD7dzB2KYNod.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Prompt SemiBold'), local('Prompt-SemiBold'), url(https://fonts.gstatic.com/s/prompt/v4/-W_8XJnvUD7dzB2Cv_4IaWMu.woff2) format('woff2');
+}
 
 $l-weight: 400;
 $h-weight: 600;
@@ -132,11 +146,7 @@ html, body {
 		line-height: 1;
 		letter-spacing: 2px;
 		text-shadow: 0px 3px 6px var(--purple);
-		margin-bottom: 15px;
-
-		@media all and (min-width: 500px) {
-			margin-bottom: 15px;
-		}
+		margin-bottom: 5px;
 	}
 
 
@@ -156,6 +166,7 @@ html, body {
 		display: flex;
 		align-items: center;
 		text-align: left;
+		padding: 10px 0;
 
 		&:hover, &:focus {
 			text-decoration: underline;
