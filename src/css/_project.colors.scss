@@ -1,0 +1,21 @@
+.project-container {
+	&.pomodoro {
+		background: linear-gradient(170deg, hsl(357, 82%, 48%), hsl(357, 82%, 40%));
+	}
+}
+
+.project {
+	&__screenshot {
+		&.pomodoro {
+			box-shadow: 0 5px 20px hsl(357, 82%, 32%);
+		}
+	}
+}
+
+.bottom {
+	&__link {
+		&.pomodoro {
+			text-shadow: 0px 2px 6px hsl(357, 82%, 30%);
+		}
+	}
+}

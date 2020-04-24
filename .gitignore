@@ -1,0 +1,7 @@
+.vscode
+node_modules
+old
+includes
+dist/images/projects
+_projects.colors.scss
+_projects.scss
