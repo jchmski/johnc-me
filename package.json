@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/jchmski/johnc-me.git"
   },
+  "scripts": {
+	"deploy": "gulp deploy"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/polyfill": "^7.8.7",
