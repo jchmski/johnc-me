@@ -1,16 +1,10 @@
-// npm install browser-sync gulp gulp-mode gulp-autoprefixer gulp-eslint gulp-sass gulp-concat @babel/core @babel/preset-env @babel/polyfill babel gulp-babel gulp-uglify gulp-phplint --save-dev
-
 var gulp = require('gulp'),
 browserSync = require('browser-sync'),
 sass = require('gulp-sass'),
 inject = require('gulp-inline-code'),
 htmlmin = require('gulp-htmlmin'),
-babel = require('gulp-babel'),
-eslint = require('gulp-eslint'),
 concat = require('gulp-concat'),
-uglify = require('gulp-uglify'),
-autoprefixer = require('gulp-autoprefixer'),
-phplint = require('gulp-phplint');
+autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('browser-sync', function() {
 	var files = [
@@ -25,7 +19,6 @@ gulp.task('browser-sync', function() {
 
 	gulp.watch('./src/index.html', gulp.series('copy', 'bundle'));
 	gulp.watch('./src/css/*.scss', gulp.series('copy', 'css', 'bundle'));
-	// gulp.watch('./src/js/*.js', gulp.series('copy', 'js', 'bundle'));
 });
 
 gulp.task('copy', function () {
@@ -49,25 +42,6 @@ gulp.task('css', function() {
       .pipe(gulp.dest('./src/packaged/css/'))
       .pipe(browserSync.stream());
 });
-
-// gulp.task('js', function() {
-//   return gulp.src('./src/js/*.js')
-//       .pipe(babel())
-//       .on('error', function(e) {
-//           console.log(e)
-//           this.emit('end')
-//       })
-//       .pipe(eslint({baseConfig: {extends: 'eslint:recommended'}}))
-//       .pipe(eslint.format())
-//       .on('error', function(e) {
-//           console.log(e)
-//           this.emit('end')
-//       })
-//       .pipe(concat('johnc.me.js'))
-//       .pipe(uglify())
-//       .pipe(gulp.dest('./src/packaged/js/'))
-//       .pipe(browserSync.stream());
-// });
 
 gulp.task('inline-css', function () {
 	return gulp.src('./src/packaged/index.html')
