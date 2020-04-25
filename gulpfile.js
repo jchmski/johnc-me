@@ -62,4 +62,4 @@ gulp.task('htmlmin', function () {
 
 gulp.task('default', gulp.series('browser-sync'));
 gulp.task('bundle', gulp.series('inline-css', 'htmlmin'));
-gulp.task('deploy', gulp.series('copy', 'inline-css', 'htmlmin'));
+gulp.task('deploy', gulp.series('css', 'copy', 'inline-css', 'htmlmin'));
