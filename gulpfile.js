@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 browserSync = require('browser-sync'),
 sass = require('gulp-sass'),
-inject = require('gulp-inline-code'),
+inject = require('gulp-inject-code'),
 htmlmin = require('gulp-htmlmin'),
 concat = require('gulp-concat'),
 autoprefixer = require('gulp-autoprefixer');
@@ -43,7 +43,7 @@ gulp.task('css', function() {
       .pipe(browserSync.stream());
 });
 
-gulp.task('inline-css', function () {
+gulp.task('inject-css', function () {
 	return gulp.src('./src/packaged/index.html')
 		.pipe(inject({
 			type: 'css',
@@ -61,5 +61,5 @@ gulp.task('htmlmin', function () {
 });
 
 gulp.task('default', gulp.series('browser-sync'));
-gulp.task('bundle', gulp.series('inline-css', 'htmlmin'));
-gulp.task('deploy', gulp.series('css', 'copy', 'inline-css', 'htmlmin'));
+gulp.task('bundle', gulp.series('inject-css', 'htmlmin'));
+gulp.task('deploy', gulp.series('css', 'copy', 'inject-css', 'htmlmin'));

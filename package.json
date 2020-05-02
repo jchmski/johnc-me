@@ -8,7 +8,7 @@
     "url": "https://github.com/jchmski/johnc-me.git"
   },
   "scripts": {
-	"deploy": "gulp deploy"
+    "deploy": "gulp deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -21,7 +21,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-inline-code": "github:jchmski/gulp-inline-code",
+    "gulp-inject-code": "github:jchmski/gulp-inject-code",
     "gulp-phplint": "^0.9.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2"
