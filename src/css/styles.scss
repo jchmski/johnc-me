@@ -95,12 +95,12 @@ html, body {
 	}
 
 	@media all and (min-width: 1000px) {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		text-align: left;
 	}
 
 	@media all and (min-width: 1400px) {
-		font-size: 1.2rem;
+		font-size: 1.45rem;
 		margin-left: -100px;
 	}
 
@@ -122,6 +122,10 @@ html, body {
 
 			@media all and (min-width: 1000px) {
 				display: inline-block;
+			}
+
+			@media all and (min-width: 1400px) {
+				width: 136px;
 			}
 
 			&:hover {
