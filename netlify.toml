@@ -1,6 +1,6 @@
 [[headers]]
   for = "/*"
-  [headers.value]
+  [headers.values]
     Strict-Transport-Security = "max-age=63072000"
     Content-Security-Policy = '''
 	  default-src=none,
