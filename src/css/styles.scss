@@ -41,7 +41,6 @@ html, body {
 
 .container {
 	width: 100%;
-	height: 100%;
 	min-height: 100vh;
 	background: linear-gradient(170deg, hsl(228, 55%, 62%), hsl(228, 55%, 48%));
 	transition: 2s transform ease-in-out;
@@ -223,6 +222,36 @@ html, body {
 
 		&:hover::after {
 			animation: 1s shift infinite;
+		}
+	}
+}
+
+.media-container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 200px auto;
+
+	&__heading {
+		color: #fff;
+		font-size: 6rem;
+		text-shadow: 0px 3px 6px var(--purple);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+}
+
+.grid {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	&__image {
+		flex: 0 0 auto;
+
+		img {
+			max-width: 200px;
+			display: block;
 		}
 	}
 }
